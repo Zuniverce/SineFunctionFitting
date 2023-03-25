@@ -1,9 +1,10 @@
 ﻿#include "Global.h"
 #include "Definition.h"
 #include "Network.h"
+const char* position = "Z:/project/program/learn/ArtificialIntelligence/NeuronNetwork/SineFunctionFitting/in.txt";
 int main()
 {
-	fin.open("Z:/in.txt");
+	fin.open(position);
 	srand((unsigned)time(NULL));
 
 	network.build();
@@ -40,7 +41,7 @@ int main()
 
 	cout << "ok" << endl;
 	fin.close();
-	fin.open("Z:/in - 副本.txt");
+	fin.open(position);
 	for (int i = 0; i < 100; i++)
 	{
 		network.inReset();
